@@ -136,15 +136,4 @@ public class BinaryMinHeap<T> {
 	public int getKeyWeight(T key) {
 		return allNodes.get(nodePosition.get(key)).weight;
 	}
-	
-	
-	
-	public void printAllNodes() {
-		Iterator<Node> iterator = allNodes.iterator();
-		
-		while(iterator.hasNext()) {
-			Node current = iterator.next();
-			System.out.println(current.key + " : " + current.weight);
-		}
-	}
 }
