@@ -43,9 +43,7 @@ public class DisjointSet {
 				representative2.rank = 0;
 				representative2.parent = representative1;
 			}
-		} else {
-			//already union
-		}
+		} 
 	}
 	
 	public Node findSet(int data) {
@@ -60,15 +58,5 @@ public class DisjointSet {
 		}
 		
 		return current;
-	}
-	
-	public void printMe() {
-		Iterator iterator = hashMap.entrySet().iterator();
-		while(iterator.hasNext()) {
-			Map.Entry pair = (Map.Entry)iterator.next();
-			Node node = (Node)pair.getValue();
-			System.out.println(pair.getKey() + " : "+ node.parent.data);
-		}
-				
 	}
 }
