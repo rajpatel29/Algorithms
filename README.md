@@ -1,1 +1,1 @@
-# Interview-Questions
+# Algorithms
