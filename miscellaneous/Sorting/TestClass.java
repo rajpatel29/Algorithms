@@ -1,42 +1,42 @@
-package Sorting_Algorithms;
+package Sorting;
 
-public class TestClass 
+public class TestClass
 {
-	public static void main(String[] args) 
+	public static void main(String[] args)
 	{
 		int inputs[] = {38, 27,43,3,9,82,10};
-		
+
 		quickSort(inputs);
-		
+
 		for(int  i = 0 ; i < inputs.length ;i++)
 		{
 			System.out.println(inputs[i]);
 		}
 	}
-	
-	private static void quickSort(int[] inputs) 
+
+	private static void quickSort(int[] inputs)
 	{
 		quickHelper(inputs , 0 , inputs.length-1);
 	}
-	
-	private static void quickHelper(int[] inputs, int start, int end) 
+
+	private static void quickHelper(int[] inputs, int start, int end)
 	{
 		int  i = start;
 		int  j = end;
 		int pivot = inputs[start + ((end - start)/2) ];
-		
+
 		while(i <= j)
 		{
 			while(inputs[i] < pivot)
 			{
 				i++;
 			}
-			
+
 			while(inputs[j] > pivot)
 			{
 				j--;
 			}
-			
+
 			if(i <= j)
 			{
 				int temp = inputs[i];
@@ -46,26 +46,26 @@ public class TestClass
 				j--;
 			}
 		}
-		
+
 		if(start < j )
 			quickHelper(inputs , start , j );
-		
+
 		if(i < end)
 			quickHelper(inputs , i , end);
 	}
 
-	
-	
-	
-	
-	
-	
-	private static void mergeSort(int[] inputs) 
+
+
+
+
+
+
+	private static void mergeSort(int[] inputs)
 	{
 		divideAndMerge(inputs , 0 , inputs.length - 1);
 	}
-	
-	private static void divideAndMerge(int[] inputs, int start, int end) 
+
+	private static void divideAndMerge(int[] inputs, int start, int end)
 	{
 		if(start < end)
 		{
@@ -76,14 +76,14 @@ public class TestClass
 		}
 	}
 
-	private static void merge(int[] inputs, int start, int mid, int end) 
+	private static void merge(int[] inputs, int start, int mid, int end)
 	{
-		int[] tempInput = new int[inputs.length]; 
+		int[] tempInput = new int[inputs.length];
 		for(int  i = 0 ; i < inputs.length ; i++ )
 		{
 			tempInput[i] = inputs[i];
 		}
-		
+
 		int i = start;
 		int j = mid + 1 ;
 		int k = start;
@@ -102,7 +102,7 @@ public class TestClass
 				j++;
 			}
 		}
-		
+
 		while(i <= mid)
 		{
 			inputs[k] = tempInput[i];
@@ -117,11 +117,11 @@ public class TestClass
 		}
 	}
 
-	private static void bubbleSort(int[] inputs) 
+	private static void bubbleSort(int[] inputs)
 	{
 		for(int  i = 0 ; i < inputs.length - 1 ; i++)
 		{
-			for (int j = 0; j < inputs.length - i - 1; j++) 
+			for (int j = 0; j < inputs.length - i - 1; j++)
 			{
 				if(inputs[j] > inputs[j+1])
 				{
@@ -132,8 +132,8 @@ public class TestClass
 			}
 		}
 	}
-	
-	private static void selectionSort(int[] inputs) 
+
+	private static void selectionSort(int[] inputs)
 	{
 		for(int i = 0 ; i < inputs.length - 1 ; i++)
 		{
@@ -148,8 +148,8 @@ public class TestClass
 			}
 		}
 	}
-	
-	private static void insertionSort(int[] inputs) 
+
+	private static void insertionSort(int[] inputs)
 	{
 		for(int  i = 1 ; i < inputs.length ; i++)
 		{
