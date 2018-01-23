@@ -5,17 +5,17 @@ import javax.management.DynamicMBean;
 public class LinkedList {
 	private Node lastNode = null;
 	private Node firstNode = null;
-	
+
 	public class Node {
 		int data;
 		Node next;
-		
+
 		public Node(int d) {
 			this.data = d;
 			this.next = null;
 		}
 	}
-	
+
 	public void push(int data) {
 		Node node = new Node(data);
 		if(lastNode == null) {
@@ -26,7 +26,7 @@ public class LinkedList {
 			lastNode = node;
 		}
 	}
-		
+
 	public void printAllNodes() {
 		Node current = firstNode;
 		while (current != null) {
@@ -42,10 +42,10 @@ public class LinkedList {
 		dummy.next = firstNode;
 		Node start = firstNode;
 		Node end = firstNode;
-		
+
 		if(start == null || start.next == null)
 			return ;
-		
+
 		while(start != null) {
 			int sum = 0;
 			boolean isSum0 = false;
@@ -58,7 +58,7 @@ public class LinkedList {
 				}
 				end = end.next;
 			}
-			
+
 			if(isSum0) {
 				start = end.next;
 				if(start == null) {
@@ -72,13 +72,12 @@ public class LinkedList {
 			}
 			end = start;
 		}
-		
+
 		Node current = firstPointer.next;
 		while (current != null) {
 			System.out.print(current.data + " ");
 			current = current.next;
 		}
 		System.out.println();
-		
-	}	
+	}
 }
