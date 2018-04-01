@@ -23,9 +23,10 @@ package EggDroppingPuzzle;
 
 public class MainClass {
 	public static void main(String[] args) {
-		int n = 19, k = 5689;
-		System.out.println("Minimum number of trials in worst case with "+n+" eggs and "+ k+
-				" floors is "+ eggDrop(n, k));
+		int n = 67, k = 11568;
+
+		System.out.println("Minimum number of trials in worst case with "+n+" eggs and "+ k+" floors is "+ eggDrop(n, k));
+	
 	}
 
 	private static int eggDrop(int n, int k) {

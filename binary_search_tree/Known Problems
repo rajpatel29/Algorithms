@@ -1,3 +1,12 @@
+=>	Traversals
+		-	In Order
+		-	Pre Order
+		-	Post Order
+		- 	DFS (yet to try this)
+		-	BFS (yet to try this)
+		
+
+
 =>	A program to check if a binary tree is BST or not
 
 		A better solution looks at each node only once. The trick is to write a utility helper function 
@@ -58,4 +67,51 @@
 			2. Scan every node down the preorder array. Each node must be either smaller than the min node or larger than the max node.
 				Update min & max accordingly.
 
-							
+
+=>	Print Left View of a Binary Tree
+
+		The left view contains all nodes that are first nodes in their levels. A simple solution is to do level order traversal 
+		and print the first node in every level.	
+		
+
+
+=>	Print Right View of a Binary Tree			
+		
+		The Right view contains all nodes that are last nodes in their levels. A simple solution is to do level order traversal 
+		and print the last node in every level.
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		

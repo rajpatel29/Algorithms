@@ -44,13 +44,9 @@ public class BinaryTree {
 			if(root.left == null && root.right == null) {
 				return null;
 			} else if(root.left == null) {
-				int min = returnMin(root.right);
-				root.data = min;
-				root.right = deleteRec(root.right, min);
+				return root.right;
 			} else if (root.right == null) {
-				int max = returnMax(root.left);
-				root.data = max;
-				root.left = deleteRec(root.left, max);
+				return root.left;
 			} else {
 				int max = returnMax(root.left);
 				root.data = max;
@@ -59,16 +55,6 @@ public class BinaryTree {
 		}
 		
 		return root;
-	}
-	
-	public int returnMin(Node root) {
-		int min = Integer.MAX_VALUE;
-		while(root != null) {
-			min = Math.min(root.data, min);
-			root = root.left;
-		}
-		
-		return min;
 	}
 	
 	public int returnMax(Node root) {
